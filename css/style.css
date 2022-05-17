@@ -1,4 +1,4 @@
-/*** CSS RESET (source: https://piccalil.li/blog/a-modern-css-reset/) ***/
+/*** RESET (source: https://piccalil.li/blog/a-modern-css-reset/) ***/
 /* Box sizing rules */
 *,
 *::before,
@@ -10,20 +10,8 @@
 body,
 h1,
 h2,
-h3,
-h4,
-p,
-figure,
-blockquote,
-dl,
-dd {
+p {
   margin: 0;
-}
-
-/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
-ul[role="list"],
-ol[role="list"] {
-  list-style: none;
 }
 
 /* Set core root defaults */
@@ -44,18 +32,9 @@ a:not([class]) {
 }
 
 /* Make images easier to work with */
-img,
-picture {
+img {
   max-width: 100%;
   display: block;
-}
-
-/* Inherit fonts for inputs and buttons */
-input,
-button,
-textarea,
-select {
-  font: inherit;
 }
 
 /* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
@@ -74,23 +53,188 @@ select {
   }
 }
 
-/*** ROOT ***/
+/* Removes the element from the page flow and hides the content to the left of the visible browser window. Readable by screen readers. */
+.sr-only {
+  position: absolute;
+  top: auto;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
+  white-space: nowrap;
+}
+
+/*** CUSTOM PROPERTIES ***/
+:root {
+  /* Fonts Families*/
+  --ff-body: "Inter", sans-serif;
+  --ff-accent: "Lexend Deca", sans-serif;
+  /* Colors - Primary */
+  --clr-dark-blue-main: hsl(233, 47%, 7%);
+  --clr-dark-blue-card: hsl(244, 38%, 16%);
+  --clr-soft-violet-accent: hsl(277, 64%, 61%);
+  /* Colors - Neutral */
+  --clr-white: hsl(0, 0%, 100%);
+  /* --clr-white-p: hsla(0, 0%, 100%, 0.75);
+  --clr-white-h: hsla(0, 0%, 100%, 0.6); */
+}
 
 /*** GLOBAL ***/
 body {
+  background-color: var(--clr-dark-blue-main);
+  font-family: var(--ff-body);
+  color: var(--clr-white);
+  font-size: 0.9375rem; /* 15px */
+  font-weight: 400;
+  line-height: 1.5625rem; /* 25px */
+  text-align: center;
+
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
+img.card-image {
+  object-position: top;
+  object-fit: contain;
+  mix-blend-mode: multiply;
+  opacity: 0.75;
+}
+
 /*** TYPOGRAPHY ***/
+.content-heading {
+  font-size: 1.75rem; /* 28px */
+  font-weight: 700;
+  line-height: 2rem;
+  /* max-width: 16.5rem; */
+  margin-bottom: 1rem;
+}
+
+.accent-text {
+  color: var(--clr-soft-violet-accent);
+}
+
+.content-body {
+  color: var(--clr-white);
+  opacity: 0.75;
+  margin-bottom: 2.5rem;
+}
+
+.stats-value {
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1.8125rem;
+  margin-bottom: 0.125rem;
+}
+
+.stats-heading {
+  font-size: 0.75rem;
+  line-height: 1.5625rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  opacity: 0.6;
+}
 
 /*** BUTTONS ***/
 
 /*** LAYOUT ***/
+.container {
+  background-color: var(--clr-dark-blue-card);
+  overflow: hidden;
+  border-radius: 0.5rem;
+  margin: 5.5rem 1.5rem;
+
+  max-width: 20.4375rem; /* 327px */
+  display: flex;
+  flex-direction: column;
+}
+
+.card-image-container {
+  display: block;
+  position: relative;
+  order: -1;
+}
+
+/* .card-image-container {
+  background-image: url("../images/image-header-mobile.jpg");
+  background-position: top;
+  background-size: contain;
+  background-repeat: no-repeat;
+  mix-blend-mode: multiply;
+  opacity: 0.75;
+  min-height: 15rem;
+} */
+
+.card-image-container::before {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  content: "";
+  --clr-soft-violet-accent: hsl(277, 64%, 61%, 0.75);
+  background-color: var(--clr-soft-violet-accent);
+  /* mix-blend-mode: multiply; */
+}
+
+.card-content {
+  padding: 2.5rem 2rem 2rem;
+  margin: 0 auto;
+}
+
+.content-stats {
+  display: flex;
+  flex-direction: column;
+}
+
+.stat-container:not(:last-child) {
+  margin-bottom: 1.5rem;
+}
 
 /*** MEDIA QUERIES ***/
-/* Global */
-/* Typography */
-/* Buttons */
-/* Layout */
+/* 56.25rem = 900px */
+@media (min-width: 56.25rem) {
+  /* Global */
+  /* Typography */
+  .content-heading {
+    font-size: 2.25rem;
+    line-height: 2.75rem;
+    margin-bottom: 1.5625rem;
+  }
+  .content-body {
+    margin-bottom: 4.5rem;
+  }
+  /* Buttons */
+  /* Layout */
+  .container {
+    flex-direction: row;
+    max-width: 69.375rem; /* 1110px */
+  }
+  .card-content {
+    min-width: 25.1875rem; /* 403px */
+    text-align: left;
+    padding-top: 4.4375rem;
+    padding-right: 5.9375rem;
+    padding-bottom: 3.6875rem;
+    padding-left: 4.5rem;
+    /* padding: 4.4375rem 5.9375rem 3.6875rem 4.5rem; */
+  }
+  .content-stats {
+    flex-direction: row;
+  }
+
+  .stat-container:not(:last-child) {
+    margin-bottom: 0;
+  }
+  .stat-container:nth-child(1) {
+    margin-right: 3.9375rem; /* 63px */
+  }
+  .stat-container:nth-child(2) {
+    margin-right: 3.75rem; /* 63px */
+  }
+  .card-image-container {
+    order: 0;
+    min-width: 33.75rem;
+    min-height: 446px;
+    width: 100%;
+  }
+}
