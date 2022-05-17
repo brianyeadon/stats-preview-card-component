@@ -23,7 +23,7 @@
     <main class="container">
       <h1 class="sr-only"></h1>
       <div class="card-content">
-        <h2 class="content-heading">Get <span class="accent-text">insights</span></span> that help your business grow.</h1>
+        <h2 class="content-heading">Get <span class="accent">insights</span></span> that help your business grow.</h1>
         <p class="content-body">Discover the benefits of data analytics and make better decisions regarding revenue, customer experience, and overall efficiency.</p>
         <div class="content-stats">
           <div class="stat-container">
@@ -41,7 +41,16 @@
         </div>
       </div>
       <div class="card-image-container">
-        <img src="./images/image-header-mobile.jpg" alt="" class="card-image">
+
+        <picture>
+          <source 
+            srcset="/images/image-header-desktop.jpg" 
+            media="(min-width: 1200px)">
+            <img 
+              src="/images/image-header-mobile.jpg" 
+              alt="" 
+              class="card-image">
+        </picture>
       </div>
     </main>
   </body>
