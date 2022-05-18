@@ -25,9 +25,8 @@ Users should be able to:
 
 ### Screenshot
 
-![screenshot of my solution to Stats preview card component](./screenshots/screenshot-desktop.png)
-
-**Delete this note after adding a screenshot of your solution.**
+![screenshot of my mobile solution to Stats preview card component](./screenshots/screenshot-mobile.png)
+![screenshot of my desktop solution to Stats preview card component](./screenshots/screenshot-desktop.png)
 
 ### Links
 
