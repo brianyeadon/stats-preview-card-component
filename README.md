@@ -6,7 +6,7 @@ This is a solution to the [Stats preview card component solution challenge on Fr
 
 - [Overview](#overview)
   - [The challenge](#the-challenge)
-  - [Screenshot](#screenshot)
+  - [Screenshots](#screenshot)
   - [Links](#links)
 - [My process](#my-process)
   - [Built with](#built-with)
@@ -23,7 +23,7 @@ Users should be able to:
 
 - View the optimal layout depending on their device's screen size
 
-### Screenshot
+### Screenshots
 
 ![screenshot of my desktop solution to Stats preview card component](./screenshots/screenshot-desktop.png)
 ![screenshot of my mobile solution to Stats preview card component](./screenshots/screenshot-mobile.png)
