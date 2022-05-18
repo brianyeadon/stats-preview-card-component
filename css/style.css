@@ -77,8 +77,6 @@ picture {
   --clr-soft-violet-accent: hsl(277, 64%, 61%);
   /* Colors - Neutral */
   --clr-white: hsl(0, 0%, 100%);
-  /* --clr-white-p: hsla(0, 0%, 100%, 0.75);
-  --clr-white-h: hsla(0, 0%, 100%, 0.6); */
 }
 
 /*** GLOBAL ***/
@@ -97,7 +95,7 @@ body {
 
 img.card-image {
   object-position: top;
-  object-fit: contain;
+  object-fit: cover;
   mix-blend-mode: multiply;
   opacity: 0.75;
 }
@@ -107,7 +105,6 @@ img.card-image {
   font-size: 1.75rem; /* 28px */
   font-weight: 700;
   line-height: 2rem;
-  /* max-width: 16.5rem; */
   margin-bottom: 1rem;
 }
 
@@ -142,7 +139,6 @@ img.card-image {
   overflow: hidden;
   border-radius: 0.5rem;
   margin: 5.5rem 1.5rem;
-
   max-width: 20.4375rem; /* 327px */
   display: flex;
   flex-direction: column;
@@ -154,24 +150,13 @@ img.card-image {
   order: -1;
 }
 
-/* .card-image-container {
-  background-image: url("../images/image-header-mobile.jpg");
-  background-position: top;
-  background-size: contain;
-  background-repeat: no-repeat;
-  mix-blend-mode: multiply;
-  opacity: 0.75;
-} */
-
 .card-image-container::before {
   position: absolute;
   inset: 0;
   width: 100%;
   height: 100%;
   content: "";
-  /* --clr-soft-violet-accent: hsl(277, 64%, 61%, 0.75); */
   background-color: var(--clr-soft-violet-accent);
-  /* mix-blend-mode: multiply; */
 }
 
 .card-content {
@@ -199,6 +184,8 @@ img.card-image {
   }
   .content-body {
     margin-bottom: 4.5rem;
+    max-width: 23.375rem;
+    /* 374px */
   }
   /* Layout */
   .container {
@@ -206,10 +193,10 @@ img.card-image {
     max-width: 69.375rem; /* 1110px */
   }
   .card-content {
-    min-width: 25.1875rem; /* 403px */
     text-align: left;
     /* 71px 95px 59px 72px */
     padding: 4.4375rem 5.9375rem 3.6875rem 4.5rem;
+    min-width: 35.625rem; /* 570px */
   }
   .content-stats {
     flex-direction: row;
@@ -226,7 +213,7 @@ img.card-image {
   .card-image-container {
     order: 0;
     min-width: 33.75rem;
-    min-height: 446px;
-    width: 100%;
+    /* min-height: 446px; */
+    /* width: 100%; */
   }
 }
