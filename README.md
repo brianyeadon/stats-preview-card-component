@@ -25,8 +25,8 @@ Users should be able to:
 
 ### Screenshot
 
-![screenshot of my mobile solution to Stats preview card component](./screenshots/screenshot-mobile.png)
 ![screenshot of my desktop solution to Stats preview card component](./screenshots/screenshot-desktop.png)
+![screenshot of my mobile solution to Stats preview card component](./screenshots/screenshot-mobile.png)
 
 ### Links
 
