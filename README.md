@@ -30,10 +30,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [**Add solution URL here**](https://your-solution-url.com)
+- Solution URL: [https://www.frontendmentor.io/solutions/responsive-stats-card-component-w62iIpOGvM](https://www.frontendmentor.io/solutions/responsive-stats-card-component-w62iIpOGvM)
 - Live Site URL: [https://brianyeadon.github.io/stats-preview-card-component/](https://brianyeadon.github.io/stats-preview-card-component/)
-
-**Delete this note after adding a solution URL link.**
 
 ## My process
 
