@@ -118,14 +118,14 @@ img.card-image {
   margin-bottom: 2.5rem;
 }
 
-.stats-value {
+.stats-heading {
   font-size: 1.5rem;
   font-weight: 700;
   line-height: 1.8125rem;
   margin-bottom: 0.125rem;
 }
 
-.stats-heading {
+.stats-label {
   font-size: 0.75rem;
   line-height: 1.5625rem;
   letter-spacing: 1px;
