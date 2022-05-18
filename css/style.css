@@ -162,6 +162,9 @@ img.card-image {
 .card-content {
   padding: 2.5rem 2rem 2rem;
   margin: 0 auto;
+
+  display: flex;
+  flex-direction: column;
 }
 
 .content-stats {
@@ -183,7 +186,7 @@ img.card-image {
     margin-bottom: 1.5625rem; /* 25px */
   }
   .content-body {
-    margin-bottom: 4.5rem;
+    /* margin-bottom: 4.5rem; */
     max-width: 23.375rem;
     /* 374px */
   }
@@ -197,9 +200,12 @@ img.card-image {
     /* 71px 95px 59px 72px */
     padding: 4.4375rem 5.9375rem 3.6875rem 4.5rem;
     min-width: 35.625rem; /* 570px */
+
+    justify-content: flex-start;
   }
   .content-stats {
     flex-direction: row;
+    margin-top: auto;
   }
   .stat-container:not(:last-child) {
     margin-bottom: unset;
